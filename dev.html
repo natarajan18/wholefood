@@ -1,0 +1,52 @@
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+<!--  If necessary, please modify the charset parameter to specify the        -->
+<!--  character set of your HTML page.                                        -->
+<!--  ----------------------------------------------------------------------  -->
+
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+ function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); 
+</script>
+
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <FORM> element to your page.             -->
+<!--  ----------------------------------------------------------------------  -->
+
+<form action="https://wholefoodsmarket--devprowfm.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+
+<input type=hidden name='captcha_settings' value='{"keyname":"wfm_Host","fallback":"true","orgId":"00D1F000000PH90","ts":""}'>
+<input type=hidden name="orgid" value="00D1F000000PH90">
+<input type=hidden name="retURL" value="https://urldefense.proofpoint.com/v2/url?u=https-3A__communityexchange.force.com_WFM_s&d=DwICaQ&c=eIGjsITfXP_y-DLLX0uEHXJvU8nOHrUK8IrwNKOtkVU&r=RQG_9GHHOl_9Qhun6pdwNiQnRoDC_bIRYseNV0LYPH0&m=ZqIUqEhclQYKbaa88eErIspxC-Y9GmgEPXQQYp6_2qs&s=iZj1ZUYzWp14xJgx7vT">
+
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+<!--  these lines if you wish to test in debug mode.                          -->
+<!--  <input type="hidden" name="debug" value=1>                              -->
+<!--  <input type="hidden" name="debugEmail"                                  -->
+<!--  value="n.nagarajan@accenture.com">                                      -->
+<!--  ----------------------------------------------------------------------  -->
+
+Candidate Name:<input  id="00N1F00000NO1et" maxlength="255" name="00N1F00000NO1et" size="20" type="text" /><br>
+
+Preferred Email:<input  id="00N1F00000NNizU" maxlength="80" name="00N1F00000NNizU" size="20" type="text" /><br>
+
+Preferred Contact Number:<input  id="00N1F00000NNizZ" maxlength="40" name="00N1F00000NNizZ" onkeydown="formatPhoneOnEnter(this, event);" size="20" type="text" /><br>
+
+Issue Type:<select  id="00N1F00000NO7tj" name="00N1F00000NO7tj" title="Issue Type"><option value="">--None--</option><option value="Website Down">Website Down</option>
+<option value="Acceptance Link not working in Offer Letter">Acceptance Link not working in Offer Letter</option>
+<option value="Cannot upload an attachment">Cannot upload an attachment</option>
+<option value="Candidate Assessment link is faulty">Candidate Assessment link is faulty</option>
+<option value="Candidate Assessment Link Missing From Email">Candidate Assessment Link Missing From Email</option>
+<option value="Candidate Password Reset Inquiry">Candidate Password Reset Inquiry</option>
+</select><br>
+
+<label for="description">Description</label><textarea name="description"></textarea><br>
+
+<input type="hidden"  id="external" name="external" value="1" /><br>
+
+<div class="g-recaptcha" data-sitekey="6LcznQUbAAAAAFXGNAd-FRZuouONZCVSyg1xgmRF"></div><br>
+<input type="submit" name="submit">
+
+</form>
